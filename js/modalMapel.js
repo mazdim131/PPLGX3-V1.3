@@ -144,7 +144,7 @@ function cekPelajaran() {
         const selesai = waktuKeMenit(pel.selesai);
 
         if (sekarang >= mulai && sekarang < selesai) {
-            status += `Pelajaran <b>${pel.mapel}</b> sedang berlangsung`;
+            status += `Pelajaran <b>${pel.mapel} | ${pel.mulai} - ${pel.selesai}</b> sedang berlangsung`;
             document.getElementById("statusPelajaran").innerHTML = status;
             return;
         }
@@ -157,5 +157,6 @@ function cekPelajaran() {
 // ===== AUTO REFRESH =====
 setInterval(cekPelajaran, 1000); // update tiap detik
 cekPelajaran(); // langsung tampil saat load
+
 
 
