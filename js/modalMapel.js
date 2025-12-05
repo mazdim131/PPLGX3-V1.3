@@ -57,6 +57,10 @@ const jadwalReguler = {
         { mapel: "Informatika", mulai: "14:30", selesai: "15:50" }
     ],
     "Jumat": [
+        { mapel: "Informatika", mulai: "07:45", selesai: "09:05" },
+        { mapel: "Produktif", mulai: "09:05", selesai: "11:05" },
+        { mapel: "Istirahat", mulai: "11:05", selesai: "13:00" },
+        { mapel: "Produktif", mulai: "13:00", selesai: "15:00" },
     ]
 };
 
@@ -157,6 +161,7 @@ function cekPelajaran() {
 // ===== AUTO REFRESH =====
 setInterval(cekPelajaran, 1000); // update tiap detik
 cekPelajaran(); // langsung tampil saat load
+
 
 
 
